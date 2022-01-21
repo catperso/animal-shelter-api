@@ -71,6 +71,17 @@ _Expect responses for each animal to look like this:_
 * _In your normal terminal, run_ `docker-compose up --build` _to bundle the app and start up the database and API server containers properly attached to each other._
 * _Make calls to the API server with endpoints listed above._
 
+## Further Exploration Objectives
+
+### Pagination
+_Using the [Will-Paginate](https://github.com/mislav/will_paginate) gem is very straightforward. Bundling the gem adds nice extra syntax for controllers to paginate results._
+
+### CORS
+_Following the lessons I used the rack-CORS gem. It was simple to allow CORS from any domain, but only for GET requests, and for more serious projects it would be no trouble to restrict which domains have CORS enabled._
+
+### Authentication (via JWT)
+_I was previously able to get this functioning on a practice project, but I wasn't able to figure out how to do tests through authentication, so it is not included in this project._
+
 ## Known Bugs
 
 _None so far._
