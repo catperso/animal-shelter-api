@@ -37,6 +37,7 @@ group :development, :test do
   gem 'pry'
   gem 'factory_bot_rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'shoulda-matchers'
 end
 
 group :development do
