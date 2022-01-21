@@ -1,42 +1,82 @@
+# __Animal Shelter API__
+
+#### _Epicodus' Ruby code review on building an API_
+
+#### _Created by: **Matt C.**_
+
+## Technologies Used
+
+* _Ruby_
+* _RSpec_
+* _Pry_
+* _Postgres_
+* _SQL_
+* _Rails_
+* _ActiveRecord_
+* _Faker_
+* _Factory Bot_
+* _Docker_
+* _Shoulda-Matchers_
+* _Will-Paginate_
+* _Rack-Cors_
+
 ## Description
+_An API with full CRUD functionality for animals at an animal shelter. Includes paginating the responses (5 per page), retrieving a random animal, and searching by species. Should have CORS enabled for only GET requests from any domain._
 
-This is a basic scaffolded Rails API using Docker with Ruby 2.6.5, Rails 5.2.4, and Postgres 12.1. This project can be used in lieu of installing Ruby, Rails and Postgres on your machine when you are working with Rails APIs during week 6 of Epicodus. When you run `docker-compose up`, Docker will create two containers on your machine: a Ruby/Rails environment running the local server and a Postgres container where your database is stored.
+## Endpoints
 
-### Running Rails and Postgres Servers
+| Usage | METHOD | URL | Params |
+| :---  | :---:  | :--- | ---: |
+| See all animals | GET | `localhost:3000/animals` |  |
+| See a specific animal | GET | `localhost:3000/animals/:id` |  |
+| Create an animal | POST | `localhost:3000/animals` | _name, species, age_ |
+| Update an animal | PUT | `localhost:3000/animals/:id` | _name, species, age_ |
+| Delete an animal (from the database) | DELETE | `localhost:3000/animals/:id` |  |
+| Search for animals of a particular species | GET | `localhost:3000/animals?species=` | _species_ |
+| Get animals paginated | GET | `localhost:3000/animals?page=` | _page_ |
+| Get a random animal | GET | `localhost:3000/animals/random` |  |
 
-The included code has a single API endpoint at: `http://localhost:3000/quotes`. Once you create and migrate the database, you'll be able to access it.
+## Responses
 
-* First run `docker-compose up` to build the project. Next, you'll need to add a database.
-
-### Running Shell Commands
-
-To access a shell environment to run `rails c`, run migrations, or run other `rake` and `rails` tasks such as `rails routes`, you'll need to do the following.
-
-Run the following command in the root directory of the project:
-
+_Expect responses for each animal to look like this:_
 ```
-$ docker-compose run api sh
+{
+  "id" : integer,
+  "name" : string,
+  "species" : string,
+  "age" : integer,
+  "created_at" : timestamp,
+  "updated_at" : timestamp
+}
 ```
 
-It's not necessary for the containers to be running (with `$ docker-compose up`). Note that the service name has been changed from `web` to `api`.
+## Using this app with Ruby 2.6.5 installed natively (no Docker)
 
-This will open a shell where you can run any commands in the web application's environment. This includes the following commands:
+* _Run_ `git clone https://github.com/catperso/animal-shelter-api` _in your terminal to clone this repository to your device, then navigate to the project directory._
+* _Run_ `bundle install` _to package the Gems and set up Gemfile.lock._
+* _Run_ `rake db:setup` _to set up the databases, tables, and seed them with placeholder entries._
+* _Run_ `rspec` _if you want to run the model and request specs._
+* _Run_ `rails s` _to start a local API server._
+* _Make calls to the API server with endpoints listed above._
 
-* `$ bundle exec rake db:create` (and any other Rake commands)
-* `$ rails routes` and `$ rails c` (as well as any other Rails commands)
-* `$ bundle exec rspec` (to run tests)
-* `$ irb` (if you just need a basic Ruby REPL)
+## Using this app with Docker
 
-Once you create and migrate the database, you can go to `http://localhost:3000/quotes` in Postman or the browser to see the API's response.
+* _First make sure Docker is installed as per the official [instructions](https://docs.docker.com/get-docker/)._
+* _Run_ `docker pull ruby:2.6.5` _to pull an image for the same version of Ruby this project was built with._
+* _Run_ `git clone https://github.com/catperso/animal-shelter-api` _in your terminal to clone this repository to your device, then navigate to the project directory._
+* _Run_ `docker-compose run api bundle install` _to bundle the gems and set up Gemfile.lock._
+* _Run_ `docker-compose run api sh` _to start a shell inside the container._
+* _Run_ `rake db:setup` _in the container shell to set up the databases, tables, and seed them with placeholder entries._
+* _Run_ `rspec` _in the container shell if you want to run the model and request specs._
+* _In your normal terminal, run_ `docker-compose up --build` _to bundle the app and start up the database and API server containers properly attached to each other._
+* _Make calls to the API server with endpoints listed above._
 
-### What if I want to add more gems to my project?
+## Known Bugs
 
-You'll need to complete the following steps:
+_None so far._
 
-* First, add the gems to the project.
+## License - [MIT](https://opensource.org/licenses/MIT)
 
-* Run `docker-compose run web bundle install`. This will bundle the new gems.
+_If you run into any problems/bugs feel free to send me an email [(mc.casperson@gmail.com)](mailto:mc.casperson@gmail.com) with details._
 
-* Next, run `docker-compose up --build`. This will rebuild the project.
-
-To read Docker's documentation on running projects using Ruby and Rails, see [Quickstart: Compose and Rails](https://docs.docker.com/compose/rails/).
+Copyright (c) _2022 Matt C._
