@@ -74,7 +74,7 @@ _Expect responses for each animal to look like this:_
 ## Further Exploration Objectives
 
 ### Pagination
-_Using the [Will-Paginate](https://github.com/mislav/will_paginate) gem is very straightforward. Bundling the gem adds nice extra syntax for controllers to paginate results._
+_Using the [Will-Paginate](https://github.com/mislav/will_paginate) gem is very straightforward. Bundling the gem adds nice extra syntax for controllers to paginate results. See the endpoints above for what requests can be paginated._
 
 ### CORS
 _Following the lessons I used the rack-CORS gem. It was simple to allow CORS from any domain, but only for GET requests, and for more serious projects it would be no trouble to restrict which domains have CORS enabled._
