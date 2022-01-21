@@ -84,7 +84,7 @@ _I was previously able to get this functioning on a practice project, but I wasn
 
 ## Known Bugs
 
-_None so far._
+_You are unable to search for both name and species, although you can paginate either search._
 
 ## License - [MIT](https://opensource.org/licenses/MIT)
 
