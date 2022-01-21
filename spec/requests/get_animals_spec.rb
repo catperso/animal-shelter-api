@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "get all pets route", :type => :request do
+describe "get all animals route", :type => :request do
   let!(:animals) { FactoryBot.create_list(:animal, 9) }
 
   it 'returns all animals' do
