@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'update an animal route', :type => :request do
   let!(:animals) { FactoryBot.create_list(:animal, 20) }
 
-  before { put "/animals/#{Animal.first.id}", params: { name: 'Snot Bakula', species: 'cat', age: '2' } }
+  before { put "/v1/animals/#{Animal.first.id}", params: { name: 'Snot Bakula', species: 'cat', age: '2' } }
 
   it 'returns status code 200' do
     expect(response).to have_http_status(200)

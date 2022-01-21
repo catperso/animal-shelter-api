@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+class V1::AnimalsController < ApplicationController
   def random
     @animals = Animal.all.shuffle.sample
     json_response(@animals, :ok)

@@ -25,16 +25,16 @@ _An API with full CRUD functionality for animals at an animal shelter. Includes 
 
 ## Endpoints
 
-| Usage | METHOD | URL | Params |
+| Usage | METHOD | V1::URL | Params |
 | :---  | :---:  | :--- | ---: |
-| See all animals | GET | `localhost:3000/animals` | _page_ |
-| See a specific animal | GET | `localhost:3000/animals/:id` |  |
-| Create an animal | POST | `localhost:3000/animals` | _name, species, age_ |
-| Update an animal | PUT | `localhost:3000/animals/:id` | _name, species, age_ |
-| Delete an animal (from the database) | DELETE | `localhost:3000/animals/:id` |  |
-| Search for animals of a particular species | GET | `localhost:3000/animals?species=` | _species, page_ |
-| Search for animals by name | GET | `localhost:3000/animals?name=` | _name, page_ |
-| Get a random animal | GET | `localhost:3000/animals/random` |  |
+| See all animals | GET | `localhost:3000/v1/animals` | _page_ |
+| See a specific animal | GET | `localhost:3000/v1/animals/:id` |  |
+| Create an animal | POST | `localhost:3000/v1/animals` | _name, species, age_ |
+| Update an animal | PUT | `localhost:3000/v1/animals/:id` | _name, species, age_ |
+| Delete an animal (from the database) | DELETE | `localhost:3000/v1/animals/:id` |  |
+| Search for animals of a particular species | GET | `localhost:3000/v1/animals?species=` | _species, page_ |
+| Search for animals by name | GET | `localhost:3000/v1/animals?name=` | _name, page_ |
+| Get a random animal | GET | `localhost:3000/v1/animals/random` |  |
 
 ## Responses
 
@@ -81,6 +81,9 @@ _Following the lessons I used the rack-CORS gem. It was simple to allow CORS fro
 
 ### Authentication (via JWT)
 _I was previously able to get this functioning on a practice project, but I wasn't able to figure out how to do tests through authentication, so it is not included in this project._
+
+### Versioning
+_I wasn't planning on doing this because I had been looking up gems to use for this, but it turns out rudimentary versioning is entirely namespacing and just a slight adjustment to the routes. Updating my request specs for everything was not difficult, and I'm pretty sure the specs need to be versioned to account for the differences in paths between versions._
 
 ## Known Bugs
 

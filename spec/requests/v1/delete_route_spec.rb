@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "delete an animal (from the database) route", :type => :request do
   let!(:animals) { FactoryBot.create_list(:animal, 20) }
 
-  before { delete "/animals/#{Animal.first.id}"}
+  before { delete "/v1/animals/#{Animal.first.id}"}
 
   it 'returns status code 200' do
     expect(response).to have_http_status(200)
