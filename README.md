@@ -27,13 +27,13 @@ _An API with full CRUD functionality for animals at an animal shelter. Includes 
 
 | Usage | METHOD | URL | Params |
 | :---  | :---:  | :--- | ---: |
-| See all animals | GET | `localhost:3000/animals` |  |
+| See all animals | GET | `localhost:3000/animals` | _page_ |
 | See a specific animal | GET | `localhost:3000/animals/:id` |  |
 | Create an animal | POST | `localhost:3000/animals` | _name, species, age_ |
 | Update an animal | PUT | `localhost:3000/animals/:id` | _name, species, age_ |
 | Delete an animal (from the database) | DELETE | `localhost:3000/animals/:id` |  |
-| Search for animals of a particular species | GET | `localhost:3000/animals?species=` | _species_ |
-| Get animals paginated | GET | `localhost:3000/animals?page=` | _page_ |
+| Search for animals of a particular species | GET | `localhost:3000/animals?species=` | _species, page_ |
+| Search for animals by name | GET | `localhost:3000/animals?name=` | _name, page_ |
 | Get a random animal | GET | `localhost:3000/animals/random` |  |
 
 ## Responses

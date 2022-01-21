@@ -11,6 +11,12 @@ class AnimalsController < ApplicationController
       else
         @animals = Animal.search_species(params[:species])
       end
+    elsif params[:name]
+      if params[:page]
+        @animals = Animal.search_name(params[:name]).paginate(page: params[:page], per_page: 5)
+      else
+        @animals = Animal.search_name(params[:name])
+      end
     elsif !params[:page]
       @animals = Animal.all
     else
