@@ -14,5 +14,4 @@ describe 'post an animal route', :type => :request do
   it 'returns a created status' do
     expect(response).to have_http_status(:created)
   end
-
 end

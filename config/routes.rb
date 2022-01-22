@@ -7,8 +7,4 @@ Rails.application.routes.draw do
   namespace :v1 do
     concerns :api_base
   end
-
-
-  # get 'animals/random' => 'animals#random'
-  # resources :animals
 end

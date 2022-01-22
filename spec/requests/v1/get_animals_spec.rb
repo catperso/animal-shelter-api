@@ -22,5 +22,4 @@ describe "get all animals route", :type => :request do
     get '/v1/animals'
     expect(response).to have_http_status(:success)
   end
-
 end
