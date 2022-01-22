@@ -74,7 +74,7 @@ _Expect responses for each animal to look like this:_
 ## Further Exploration Objectives
 
 ### Pagination
-_Using the [Will-Paginate](https://github.com/mislav/will_paginate) gem is very straightforward. Bundling the gem adds nice extra syntax for controllers to paginate results. See the endpoints above for what requests can be paginated._
+_Using the [Will-Paginate](https://github.com/mislav/will_paginate) gem is very straightforward. Bundling the gem adds nice extra syntax for controllers to paginate results. See the endpoints above for what requests can be._
 
 ### CORS
 _Following the lessons I used the rack-CORS gem. It was simple to allow CORS from any domain, but only for GET requests, and for more serious projects it would be no trouble to restrict which domains have CORS enabled._
@@ -87,7 +87,7 @@ _I wasn't planning on doing this because I had been looking up gems to use for t
 
 ## Known Bugs
 
-_You are unable to search for both name and species, although you can paginate either search._
+_You are unable to search for both name and species, although you can paginate either search. Trying to search for both only searches for species._
 
 ## License - [MIT](https://opensource.org/licenses/MIT)
 
